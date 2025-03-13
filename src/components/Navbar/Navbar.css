@@ -1,0 +1,142 @@
+/* Navbar Base Styles */
+.respNavbar {
+    background-color: black;
+    padding: 10px;
+}
+
+.nav-item .nav-link {
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item .nav-link:hover {
+    color: #ff7004 !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* List inside Dropdown */
+.dropdown-menu .list {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-item {
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+    color: #ff7004;
+    transform: translateX(10px);
+    background-color: transparent !important;
+}
+
+/* Ensure the dropdown menu is visible */
+.navbar {
+    overflow: visible !important;
+}
+
+/* Multi-column Dropdown Styling */
+.multi-column {
+    width: 50rem; /* Adjust width as needed */
+}
+
+.dropdown-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap; /* Ensure wrapping on small screens */
+}
+
+.column {
+    flex: 1;
+    min-width: 120px; /* Adjust based on content */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    /* Adjust navbar on smaller screens */
+    .navbar-collapse {
+        background-color: black;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Dropdown menu adapts for smaller screens */
+    .dropdown-menu {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .dropdown-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust dropdown for tablets */
+    .dropdown-menu {
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .dropdown-columns {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile Navbar */
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    /* Mobile-friendly dropdown */
+    .dropdown-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    /* Improve hover effect for mobile */
+    .dropdown-item:hover {
+        transform: none;
+    }
+}

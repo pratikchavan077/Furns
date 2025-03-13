@@ -1,0 +1,99 @@
+/* Ensure table takes full width and is evenly spaced */
+.wishlist-container{
+    padding: 3rem;
+}
+.wishlist-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+
+.wishlist-table thead tr th {
+    background-color: #e9e9e9 !important;
+    color: #000 !important;
+}
+  .wishlist-table th,
+  .wishlist-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+  }
+  
+  /* Set column width */
+  .wishlist-table th:nth-child(1),
+  .wishlist-table td:nth-child(1) {
+    width: 15%;
+  }
+  
+  .wishlist-table th:nth-child(2),
+  .wishlist-table td:nth-child(2) {
+    width: 25%;
+  }
+  
+  .wishlist-table th:nth-child(3),
+  .wishlist-table td:nth-child(3),
+  .wishlist-table th:nth-child(4),
+  .wishlist-table td:nth-child(4),
+  .wishlist-table th:nth-child(5),
+  .wishlist-table td:nth-child(5),
+  .wishlist-table th:nth-child(6),
+  .wishlist-table td:nth-child(6) {
+    width: 12%;
+  }
+  
+  /* Image Styling */
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wishlist-img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Product Name Alignment */
+  .product-name {
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  /* Quantity Selector */
+  .quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .qty-btn {
+    background: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .qty-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  /* Add to Cart Button */
+  .add-to-cart-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: smaller;
+    font-weight: bold;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #fa862e;
+    color: white
+  }
+  

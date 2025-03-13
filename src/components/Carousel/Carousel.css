@@ -1,0 +1,115 @@
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* width: 80%; Ensures content doesn't overflow */
+    /* background: rgba(0, 0, 0, 0.4); Optional: Improves text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Heading styles */
+.carousel-item h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+/* Button styles */
+.carousel-item button {
+    color: white;
+    background-color: #ff7004;
+    border: none;
+    margin-top: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-item button:hover {
+    background-color: #ff862a;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    .carousel-caption {
+        width: 90%;
+        padding: 15px;
+    }
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .carousel-caption {
+        top: 55%;
+        height: 50%;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    .carousel-item button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+/* Further adjustments for small mobile screens */
+@media (max-width: 480px) {
+    .carousel-caption {
+        top: 60%;
+        width: 100%;
+        height: 50%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .carousel-caption h1 {
+        font-size: 1.2rem;
+    }
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+    .carousel-item button {
+        font-size: 0.8rem;
+        padding: 0.7rem 1rem;
+    }
+}
+/* Default styles */
+.carousel-item img {
+    width: 100%;
+    height: 500px; /* Default height for larger screens */
+    object-fit: cover; /* Ensures the image scales properly */
+}
+
+/* Adjust height for tablets */
+@media (max-width: 1024px) {
+    .carousel-item img {
+        height: 400px;
+    }
+}
+
+/* Increase height for mobile screens */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+    }
+}
+
+/* Further increase height for smaller mobile screens */
+@media (max-width: 480px) {
+    .carousel-item img {
+        height: 400px;
+    }
+}

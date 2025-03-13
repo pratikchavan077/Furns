@@ -1,0 +1,16 @@
+.loginRegisterLabel {
+    text-align: center !important;
+    padding: 30px;
+}
+
+.loginRegisterLabel .breadcrumb {
+    display: flex !important;
+    justify-content: center !important;
+}
+.loginForm .btn{
+    background-color: #f2f2f2;
+}
+.loginForm .btn:hover{
+    background-color: #ff6e04;
+    color: white;
+}

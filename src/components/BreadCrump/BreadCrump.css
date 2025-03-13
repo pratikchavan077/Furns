@@ -1,0 +1,28 @@
+.breadcrumb-item{
+    font-size: smaller;
+}
+ .path {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item .path::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust distance from text */
+    width: 0;
+    height: 2px; /* Thickness of underline */
+    background-color: #b74f28;
+    transition: width 0.3s ease-in-out;
+}
+
+.breadcrumb-item .path:hover {
+    color: #b74f28 !important;
+}
+
+.breadcrumb-item .path:hover::after {
+    width: 100%;
+}

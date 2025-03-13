@@ -1,0 +1,67 @@
+.productBannersForOffers .card{
+    margin: 20px 0;
+    width: 48%;
+    border: none;
+    overflow: hidden;
+    position: relative; 
+
+}
+.productBannersForOffers .card .card-img{
+    overflow: hidden;
+}
+.productBannersForOffers .card:hover{
+    cursor: pointer;
+}
+.productBannersForOffers .card:hover .card-img {
+    transform: scale(1.17) rotate(1deg); /* Reduced tilt for a more subtle effect */
+    transition: transform 0.25s ease-out; /* Smoother animation */
+}
+.productBannersForOffers .card .card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-out;
+}
+.productBannersForOffers .card .card-img-overlay .leftHeading{
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-left: 21rem;
+    max-width: 20rem;
+}
+.productBannersForOffers .card .card-img-overlay .leftText{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 21rem;
+}
+.productBannersForOffers .card .card-img-overlay .rightHeading{
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-left: 4rem;
+    max-width: 20rem;
+}
+.productBannersForOffers .card .card-img-overlay .rightText{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 4rem;
+}
+@media screen and (max-width: 1024px) {
+    .productBannersForOffers .card {
+        width: 45%; /* Slightly bigger cards on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .productBannersForOffers {
+        flex-direction: column; /* Stack cards on small screens */
+        align-items: center;
+    }
+    .productBannersForOffers .card {
+        width: 90%; /* Full width on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .productBannersForOffers .card {
+        width: 100%; /* Use full width on very small devices */
+    }
+}

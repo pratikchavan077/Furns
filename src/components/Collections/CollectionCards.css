@@ -1,0 +1,35 @@
+.collectionCards .cards .collectionCard{
+    /* padding: 10px; */
+    margin: 2rem auto;
+    border: none;
+    overflow: hidden;
+}
+.collectionCards .cards .collectionCard:hover {
+    transform: none;
+    cursor: pointer;
+}
+.collectionCards .cards .collectionCard .card-img-overlay h4{
+    margin-top: 40px;
+    color: black;
+    font-weight: 600;
+    max-width: 13rem;
+}
+
+.collectionCards .cards .collectionCard .card-img-overlay a{
+    color: #474747;
+}
+.collectionCards .cards .collectionCard .card-img-overlay a:hover{
+    cursor: pointer;
+    color: #ff7004;
+    transition: color 0.2s ease;
+}
+.collectionCards .cards .collectionCard:hover .collectionCardImg {
+    transform: scale(1.14) rotate(5deg) !important; /* Reduced tilt for a more subtle effect */
+    transition: transform 0.25s ease-out !important; /* Smoother animation */
+}
+.collectionCards .cards .collectionCard .collectionCardImg {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-out !important;
+}

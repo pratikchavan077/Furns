@@ -1,0 +1,201 @@
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Divider styling */
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+/* Heading section */
+.headingSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Logo section */
+.headingLogo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.headingName h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Navigation icons */
+.headingLogoItem {
+    font-size: larger;
+    padding: 0 15px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Cart icon hover effect */
+.headingLogoItem i {
+    transition: color 0.2s ease;
+}
+
+.headingLogoItem i:hover {
+    color: #ff7004;
+}
+
+/* Cart badge styling */
+.position-absolute {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background-color: #ff7004;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Search bar animation */
+.searchBar {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    position: absolute;
+    width: 20rem;
+    top: 50px;
+    left: -80px;
+    z-index: 1000;
+}
+
+.searchBar.active {
+    max-height: 100px; 
+    opacity: 1;
+}
+
+input:focus {
+    box-shadow: none !important;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+}
+
+.searchBar button {
+    background-color: #ff7004;
+    color: #fff;
+    border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .headingSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .headingLogo {
+        margin-top: 10px;
+    }
+}
+
+/* Profile dropdown */
+.profileList {
+    margin-top: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    z-index: 10;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.profileList.active {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.profileList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profileList ul li {
+    padding: 8px 12px;
+    font-size: small;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.profileList ul li:hover {
+    color: #ff7004;
+}
+
+/* Cart styling */
+.offcanvas-body .card {
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.card img {
+    /* transition: none !important; */
+    transform: none !important;
+}
+
+.cartbuttons .button1 {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.cartbuttons .button1:hover {
+    background-color: #ff7004;
+}
+
+.cartbuttons .button2 {
+    background-color: #ff7004;
+    border: none;
+    color: white;
+}
+
+.finalAmt {
+    color: #ff7004;
+}
+
+.cartCardBody .card-text {
+    color: #ff7004;
+}
+
+/* Trash icon styling */
+.fa-trash {
+    color: red;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.fa-trash:hover {
+    color: darkred;
+}

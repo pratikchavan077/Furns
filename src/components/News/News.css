@@ -1,0 +1,63 @@
+.newsCard .card{
+    margin: 10px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+.newsCard .card img{
+    transition: transform 0.25s ease-out; /* Smoother animation */
+    overflow: hidden;
+    
+}
+.newsCard .card .imgContainer {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsCard .card:hover img{
+    cursor: pointer;
+    transform: scale(1.17) rotate(1deg); /* Reduced tilt for a more subtle effect */
+}
+.newsCard .card .card-body h5{
+    margin-top: 15px;
+}
+.newsCard .card .card-body span{
+    color: #ff7004;
+    text-decoration: underline;
+}
+.newsCard .card .card-body a{
+    border: none;
+    padding: 10px 15px;
+    background-color: #4d4d4d;
+    border: none;
+}
+.newsCard .card .card-body a:hover{
+    background-color: #ff862a;
+}
+@media screen and (max-width: 1024px) {
+    .newsCard .card {
+        width: 45%; /* Slightly bigger cards on tablets */
+        flex-direction: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .newsCard {
+        flex-direction: column; /* Stack cards on small screens */
+        align-items: center;
+    }
+    .newsCard .card {
+        width: 90%; /* Full width on mobile */
+        flex-direction: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .newsCard .card {
+        width: 100%; /* Use full width on very small devices */
+        flex-direction: wrap;
+    }
+}

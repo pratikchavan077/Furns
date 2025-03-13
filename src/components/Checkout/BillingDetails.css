@@ -1,0 +1,13 @@
+.placeOrderBtn{
+    background-color: #ff7004;
+    color: white;
+}
+.placeOrderBtn:hover{
+    background-color: black;
+    color: white;
+}
+@media (max-width: 768px) {
+    .billingDetails {
+       flex-wrap: wrap;
+    }
+}

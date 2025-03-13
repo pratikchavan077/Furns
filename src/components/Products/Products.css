@@ -1,0 +1,173 @@
+.heading{
+    padding: 20px;
+    text-align: center;
+}
+.navLinks{
+    text-align: center;
+}
+.navLinks a{
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: large;
+    color: #474747;
+}
+.navLinks .active{
+    color: #ff7004
+}
+.navLinks a:hover{
+    color: #ff7004 !important;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+.productCards {
+    padding: 2rem;
+}
+
+.productCards .card {
+    margin: 20px;
+    border: none;
+    overflow: hidden;
+    position: relative; /* Keeps the card size fixed */
+}
+
+.productCards .card:hover {
+    cursor: pointer;
+}
+
+/* Fixes border movement by keeping the image position absolute */
+.image-container {
+    overflow: hidden; /* Prevents image from exceeding card */
+    position: relative; /* Adjusted to relative to keep layout intact */
+    /* width: 100%;  */
+    /* height: 250px; Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    transition: transform 0.2s ease-out;
+    width: 100%; /* Ensures image fits container */
+    height: 100%; 
+    object-fit: cover; /* Keeps aspect ratio */
+}
+
+/* Apply transformation only to image, without affecting the card layout */
+.card:hover img {
+    transform: scale(1.14) rotate(5deg) !important;
+}
+.card:hover .itemName {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease-in-out;
+}
+
+ .fa-heart{
+    position: absolute;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    top: 5%;
+    left: 80%;
+    /* transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; */
+ }
+ .fa-heart:hover{ 
+    background-color: #ff7004;
+    color: white;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+ }
+ .productCards .card:hover  .fa-heart{
+    opacity: 1;
+ }
+ .fa-rotate-right{
+    position: absolute;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    top: 25%;
+    left: 80%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+ }
+ .fa-rotate-right:hover{ 
+    background-color: #ff7004;
+    color: white;
+ }
+ .productCards .card:hover  .fa-rotate-right{
+    opacity: 1;
+ }
+ .fa-expand{
+    position: absolute;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    top: 15%;
+    left: 80%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+ }
+ .fa-expand:hover{ 
+    background-color: #ff7004;
+    color: white;
+ }
+ .productCards .card:hover  .fa-expand{
+    opacity: 1;
+ }
+.productCards .card img{
+    position: relative;
+}
+ .shop-button{
+    padding: 10px 35px;
+    top: 65%;
+    background-color: white;
+    color: #474747;
+    opacity: 0;
+    position: absolute;
+    transform:translateY(10);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-left: 25%;
+    outline: none;
+    border: none;
+    font-weight: 600;
+ }
+ .productCards .card:hover .shop-button{
+    
+    opacity: 1;
+    transform: translateY(0);
+ }
+ .productCards .card .shop-button:hover{
+    background-color: white;
+    color: #ff7004;
+ }
+ .productCards .card .shop-button:focus{
+    outline: none;
+    border: none;
+ }
+ .productCards .card .card-body .itemName:hover{
+    color: #ff7004;
+ }
+ .badge-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column; /* Stacks them vertically */
+    gap: 5px; /* Adds space between them */
+}
+
+.newSpan {
+    background-color: #007a58;
+    color: white;
+    padding: 2px 6px;
+    font-size: smaller;
+    border-radius: 2px;
+    text-align: center;
+}
+.discountSpan{
+    background-color: #ff7004;
+    color: white;
+    padding: 2px 6px;
+    font-size: smaller;
+    border-radius: 2px;
+    text-align: center;
+}

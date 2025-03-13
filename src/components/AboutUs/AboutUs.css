@@ -1,0 +1,236 @@
+/* Section 1 (About Us with Path start) */
+
+.about {
+    padding: 100px;
+    background-color: #e9e9e9 !important;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pageTitle h1 {
+    margin-left: 5rem;
+    color: black;
+    margin: 0;
+}
+
+.path {
+    text-decoration: none;
+
+}
+
+/* .breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 10px;
+    color: white;
+} */
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows text to wrap on small screens */
+    align-items: center;
+    gap: 5px;
+    /* Adds space between breadcrumb items */
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+    /* Removes default padding */
+}
+.breadcrumb .breadcrumb-item .path{
+    color: black;
+}
+.breadcrumb span {
+    color: black;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        /* Stacks elements vertically on tablets */
+        text-align: center;
+    }
+
+    .pageTitle h1 {
+        margin-left: 0;
+        /* Resets margin for smaller screens */
+    }
+
+    .breadcrumb {
+        justify-content: center;
+        /* Centers breadcrumb on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 0.8rem;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/*Section 1 Ends Here */
+
+/* section 2 Starts Here (Welcome Section) */
+
+.AboutUsWelcomeSection {
+    margin-top: 100px;
+}
+
+.imageSecion {
+    padding: 10px 20px;
+}
+
+.imageSecion img {
+    width: 100%;
+    /* max-width: 400px;  */
+    height: auto;
+}
+
+.textSecion {
+    max-width: 500px;
+    /* Keeps text at a readable width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .AboutUsWelcomeSection {
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .imageSecion,
+    .textSecion {
+        max-width: 100%;
+    }
+
+    .imageSecion {
+        margin-bottom: 20px;
+        /* Adds space between image and text */
+    }
+}
+
+/*Section 2 Ends Here */
+/* Section 3 Functionality starts here */
+.functionalityContent {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px; /* Adds spacing between text and progress bar */
+}
+
+/* Progress Bar Styling */
+.progressBar {
+    width: 50%;
+    min-width: 200px; /* Ensures it doesn’t shrink too much */
+}
+
+.progress {
+    height: 10px; /* Adjust height as needed */
+    background-color: #ccc; /* Light grey background */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #ff6e04; /* Progress bar color */
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .functionalityContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .progressBar {
+        width: 100%;
+    }
+}
+.progBar{
+    padding: 10px;
+}
+/* Section 3 ends here */
+.teamSection .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.teamSection .container .teamMember {
+    margin: 10px;
+    border: none;
+    background-color: #faf6f6;
+    flex-wrap: wrap;
+    max-width: 250px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.teamSection .container .teamMember .card-body {
+    text-align: center;
+    position: relative; /* Needed for absolute positioning inside */
+    height: 100px; /* Adjust as needed */
+}
+.teamSection .container .teamMember .card-body p {
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+
+.teamSection .container .teamMember img {
+    padding: 30px;
+    transform: none !important;
+}
+.teamMember:hover .card-text {
+    opacity: 0;
+}
+.socialMedia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+.teamMember:hover{
+    cursor: pointer;
+}
+.teamMember:hover {
+    cursor: pointer;
+}
+.teamMember:hover .socialMedia {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+.teamMember:hover .card-text {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease-in-out;
+}
+.teamSection .container .teamMember .role-container {
+    position: relative;
+    height: 30px; /* Adjust based on text size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .teamSection .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .teamSection .container .teamMember {
+        max-width: 100%;
+    }
+}

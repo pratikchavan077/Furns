@@ -1,0 +1,38 @@
+.accordion-item .accordion-header .accordion-button{
+    background-color: #faf6f6;
+    color: black;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.accordion-item .accordion-header .accordion-button:hover{
+    background-color: #faf6f6;
+    color: #ff6e04;
+}
+.accordion-item .accordion-header .accordion-button:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.divide{
+    border: 1px solid #f2f2f2;
+    margin: 20px 0;
+}
+form .back{
+    border: none;
+}
+form .back:hover{
+    color: #ff6e04;
+}
+form .back:focus{
+    border: none;
+}
+.btnSubmit{
+    background-color: #faf6f6;
+    
+    padding: 10px 15px;
+}
+.btnSubmit:hover{
+    background-color: #ff6e04;
+    color: white;
+}
