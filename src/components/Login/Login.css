@@ -7,6 +7,9 @@
     display: flex !important;
     justify-content: center !important;
 }
+.loginForm{
+    margin-bottom: 20px;
+}
 .loginForm .btn{
     background-color: #f2f2f2;
 }

@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './BillingDetails.css'
+import { useNavigate } from 'react-router-dom'
 const BillingDetails = ({cartItems}) => {
     const [totalPrice, setTotalPrice] = useState(0)
+    const navigate = useNavigate()
+    const handleNavigatetoSignIn = (e) => {
+        e.preventDefault()
+        navigate('/login')
+    }
     useEffect(() => {
         const total = cartItems.reduce((sum, item) => sum + item.price, 0)
         setTotalPrice(total.toFixed(2))
@@ -144,7 +150,7 @@ const BillingDetails = ({cartItems}) => {
                     {
                         cartItems.length>0 ? (
                             cartItems.map((item,index) => (
-                                <div className="col-md-10 d-flex justify-content-between">
+                                <div key={index} className="col-md-10 d-flex justify-content-between">
                                 
                                 <p>{item.name} X 1</p>
                                 <p>${item.price}</p>
@@ -176,7 +182,7 @@ const BillingDetails = ({cartItems}) => {
                     <h5>Cash on delivery</h5>
                     <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
                 </div>
-                <button className="btn placeOrderBtn"><b>PLACE ORDER</b></button>
+                <button className="btn placeOrderBtn" onClick={() => handleNavigatetoSignIn(event)}><b>PLACE ORDER</b></button>
             </form>
 
         </div>

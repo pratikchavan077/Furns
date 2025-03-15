@@ -3,6 +3,10 @@ import './Header.css'
 import { useNavigate, } from 'react-router-dom'
 const HeaderCartPriceCalculate = ({ totalPrice,setIsCartActive }) => {
     const navigate = useNavigate()
+    const naviageToSignin = () => {
+        setIsCartActive(false)
+        setTimeout(() => navigate('/login'), 100);
+    }
     const naviageToCheckout = () => {
         setIsCartActive(false)
         setTimeout(() => navigate('/checkout'), 100);
@@ -34,7 +38,7 @@ const HeaderCartPriceCalculate = ({ totalPrice,setIsCartActive }) => {
                     <p className='finalAmt'>${total}</p>
                 </div>
                 <div className="cartbuttons d-flex flex-column">
-                    <button type="button" className="btn button1 my-3 py-3">View Cart</button>
+                    <button type="button" className="btn button1 my-3 py-3" data-bs-dismiss="offcanvas" onClick={naviageToSignin}>View Cart</button>
                     <button type="button"  data-bs-dismiss="offcanvas" className="btn button2 my-3 py-3" onClick={naviageToCheckout}>Checkout</button>
                 </div>
             </div>

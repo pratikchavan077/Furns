@@ -1,20 +1,10 @@
 import React, { useEffect, useState } from "react";
-import cart1 from "../../assets/cart1.webp";
 import "./Header.css";
 import HeaderCartPriceCalculate from "./HeaderCartPriceCalculate";
 
 const HeaderCart = ({ cartItems, isCartActive, setIsCartActive, qty }) => {
 
     const [totalPrice, setTotalPrice] = useState(0)
-
-
-    // Sample cart items (Replace with dynamic data if needed)
-    // const cartItems = [
-    //     { id: 1, name: "Walnut Cutting Board", price: 91.86, image: cart1 },
-    //     { id: 2, name: "Lucky Wooden Elephant", price: 453.28, image: cart1 },
-    //     { id: 3, name: "Lucky Wooden Elephant", price: 453.28, image: cart1 },
-    //     { id: 4, name: "Lucky Wooden Elephant", price: 453.28, image: cart1 },
-    // ];
     useEffect(() => {
         const total = cartItems.reduce((sum, item) => sum + item.price, 0)
         setTotalPrice(total.toFixed(2))
