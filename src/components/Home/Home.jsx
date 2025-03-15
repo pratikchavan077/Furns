@@ -7,13 +7,14 @@ import Products from '../Products/Products'
 import SaleBanner from '../SaleBanners/SaleBanner'
 import NewProduct from '../NewProducts/NewProduct'
 import News from '../News/News'
+import ProductCard from '../Products/ProductCard'
 
 const Home = ({productsData,carouselData,wishListedProducts,setWishListedProducts,qty,setQty,cartItems,setCartItems,setIsCartActive}) => {
     return (
         <>
             <Carousel carouselData={carouselData}/>
             <CollectionCards />
-            <Products qty={qty} setQty={setQty} productsData = {productsData} wishListedProducts={wishListedProducts} setWishListedProducts ={setWishListedProducts } cartItems={cartItems} setCartItems={setCartItems} setIsCartActive={setIsCartActive} />
+            <Products qty={qty} setQty={setQty} productsData = {productsData} wishListedProducts={wishListedProducts} setWishListedProducts ={setWishListedProducts} cartItems={cartItems} setCartItems={setCartItems} setIsCartActive={setIsCartActive} />
             <SaleBanner />
             <NewProduct productsData= {productsData}/>
             <News />

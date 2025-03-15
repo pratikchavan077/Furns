@@ -4,8 +4,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    /* width: 80%; Ensures content doesn't overflow */
-    /* background: rgba(0, 0, 0, 0.4); Optional: Improves text readability */
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }

@@ -15,12 +15,31 @@
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
-    padding: 20px;
+    background-color: white !important;
+    width: 600px; /* Set a fixed width */
+    max-width: 90vw;
+    padding: 10px;
     border-radius: 8px;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: -17rem;
+    top: 50px !important;
 }
-
+.dropdown-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 20px;
+}
+.column {
+    flex: 1;
+    min-width: 150px; /* Ensures better responsiveness */
+}
+.dropdown-item {
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 5px 10px;
+}
 /* List inside Dropdown */
 .dropdown-menu .list {
     list-style: none;
@@ -61,7 +80,6 @@
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
-    /* Adjust navbar on smaller screens */
     .navbar-collapse {
         background-color: black;
         padding: 10px;
@@ -74,10 +92,10 @@
         text-align: center;
     }
 
-    /* Dropdown menu adapts for smaller screens */
     .dropdown-menu {
         width: 100%;
         padding: 15px;
+        margin-left: 0;
     }
 
     .dropdown-columns {

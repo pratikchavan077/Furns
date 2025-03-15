@@ -164,6 +164,10 @@ input:focus {
     /* transition: none !important; */
     transform: none !important;
 }
+.card:hover .row .col-md-4 img{
+    transition: none !important;
+    transform: none !important;
+}
 
 .cartbuttons .button1 {
     background-color: black;
@@ -199,3 +203,6 @@ input:focus {
 .fa-trash:hover {
     color: darkred;
 }
+
+
+

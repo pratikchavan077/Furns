@@ -1,6 +1,6 @@
 import React from 'react'
 import './MyAccount.css'
-const MyAccountAccordianForm = ({ number }) => {
+const MyAccountAccordianForm = ({ number,onClickNavigate }) => {
     const handleBack = (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -105,6 +105,23 @@ const MyAccountAccordianForm = ({ number }) => {
             </div>
         )
     }
+    else if (number === 4) {
+        return (
+          <div className="container">
+            <div className="modifyWishlist">
+              <h5>MODIFY YOUR WISHLIST</h5>
+              <div className="divide"></div>
+              <p>Click the button below to view or edit your wishlist.</p>
+              <div className="formButtons d-flex justify-content-between">
+                <button className="btn btnSubmit" onClick={onClickNavigate}>
+                  Modify Your Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      return null;
 
 }
 

@@ -68,10 +68,18 @@ const shopCategory = [
 ]
 
 const Navbar = () => {
+    const scrollToSection = (id) => {
+        setTimeout(() => {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100); // Delay to ensure the homepage loads first
+    };
     return (
         <div className="respNavbar">
             <div className="container d-flex justify-content-center align-items-center">
-                <nav className="navbar navbar-expand-lg">
+                <nav className="navbar navbar-expand-md">
                     <div className="container-fluid">
                         {/* Navbar Toggler */}
                         <button
@@ -105,12 +113,12 @@ const Navbar = () => {
 
                                 {/* Pages Dropdown */}
                                 <li className="nav-item mx-3">
-                                    <a className="nav-link active" href="#new-arrivals">New Arrivals</a>
+                                    <Link className="nav-link active" to="/" onClick={() => scrollToSection("new-arrivals")}>New Arrivals</Link>
                                 </li>
 
                                 {/* Blog Dropdown */}
                                 <li className="nav-item mx-3">
-                                    <a className="nav-link active" href="#offers">Offers</a>
+                                    <Link className="nav-link active" to="/" onClick={() => scrollToSection("offers")}>Offers</Link>
                                 </li>
 
                                 {/* Contact Us */}

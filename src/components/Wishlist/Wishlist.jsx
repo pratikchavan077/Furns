@@ -3,16 +3,16 @@ import BreadCrump from "../BreadCrump/BreadCrump";
 import "./Wishlist.css"; // Import the CSS file for styles
 
 const Wishlist = ({ productsData,qty, setQty,setCartItems,cartItems }) => {
-    // const handleMinus = () => {
-    //     if(qty>1){
-    //         setQty(qty - 1)
-    //     }
+    const handleMinus = () => {
+        if(qty>1){
+            setQty(qty - 1)
+        }
         
-    // }
-    // const handlePlus = () => {
-    //     setQty(qty + 1)
+    }
+    const handlePlus = () => {
+        setQty(qty + 1)
         
-    // }
+    }
   return (
     <>
       <BreadCrump content="FAVOURITES" location="WISHLIST" />
@@ -52,7 +52,8 @@ const Wishlist = ({ productsData,qty, setQty,setCartItems,cartItems }) => {
                           <td>${(item.price*qty).toFixed(2)}</td>
                           <td>
                             <button className="btn add-to-cart-btn" onClick={() => {
-                                setCartItems([...cartItems, { ...item, qty: quantities[item.id] }]);
+                                // setCartItems([...cartItems, { ...item, qty: quantities[item.id] }]);
+                                setCartItems([...cartItems, item ]);
                             }}>ADD TO CART</button>
                           </td>
                         </tr>

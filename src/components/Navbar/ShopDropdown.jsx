@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ShopDropdown = ({shopCategory}) => {
     return (
@@ -21,7 +22,7 @@ const ShopDropdown = ({shopCategory}) => {
                                 <li><hr className="dropdown-divider" /></li>
                                 {category.subcategories.map((subCat) => (
                                     <li key={subCat.id}>
-                                        <a className="dropdown-item" href="#">{subCat.name}</a>
+                                        <Link className="dropdown-item" to="shop">{subCat.name}</Link>
                                     </li>
                                 ))}
                             </div>

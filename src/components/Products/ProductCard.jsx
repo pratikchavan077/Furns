@@ -2,17 +2,17 @@ import React from 'react'
 import './Products.css'
 import { useNavigate } from 'react-router-dom'
 const ProductCard = ({ productsData, wishListedProducts, setWishListedProducts,cartItems,setCartItems ,setIsCartActive}) => {
+    const navigate = useNavigate()
     const handleWishListedProducts = (item) => {
-            setWishListedProducts([...wishListedProducts, item])
-        console.log(item.id)
-        console.log(wishListedProducts)
+        
         navigate('/wishlist')
+        setWishListedProducts((prev) => [...prev,item])
     }
     const handleAddToCard = (item) => {
         setCartItems([...cartItems,item])
         setIsCartActive(true)
     }
-    const navigate = useNavigate()
+    
     return (
         <div className="productCards d-flex justify-content-center align-items-center flex-wrap">
             {
@@ -34,7 +34,7 @@ const ProductCard = ({ productsData, wishListedProducts, setWishListedProducts,c
                         <button className="btn shop-button" onClick={() => handleAddToCard(item)}>Add To Cart</button>
                         <div className="card-body">
                             <p className="card-text itemName">{item.name}</p>
-                            <p className="card-text itemName">{item.price}</p>
+                            <p className="card-text itemName">${item.price}</p>
                         </div>
                     </div>
                 ))

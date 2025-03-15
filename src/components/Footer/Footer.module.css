@@ -1,0 +1,128 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.listItem {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.listItem a {
+  text-decoration: none;
+  color: #ccc;
+  display: inline-block; /* Ensure transform works */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.listItem a:hover {
+  color: #ff7004;
+  transform: translateX(10px); /* Moves the link slightly to the right */
+}
+
+.highlightLink {
+  color: #007bff;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px; /* Increase spacing between icons */
+  align-items: center; /* Align icons properly */
+  margin-top: 10px;
+}
+
+.socialIcons svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px; /* Increased padding */
+  background-color: #444; /* Ensure visibility */
+  border-radius: 50%;
+  width: 32px; /* Ensure size */
+  height: 32px;
+  color: white; /* Ensure icon color */
+}
+
+.socialIcons svg:hover {
+  background-color: #ff7004;
+}
+.blueBox {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  /* padding: 10px; */
+}
+
+.newsletterInput {
+  padding: 8px;
+  flex: 1;
+  border: 1px solid #666;
+  background-color: #555;
+  color: white;
+  margin: 10px;
+}
+
+.newsletterButton {
+  background-color: #ff7004;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 10px;
+  width: 50%;
+}
+
+.newsletterButton:hover {
+  background-color: #ff862a;
+}
+
+.bottomFooter {
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.heartIcon {
+  color: red;
+}

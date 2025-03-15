@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import './Header.css'
-const HeaderCartPriceCalculate = ({ totalPrice }) => {
-
+import { useNavigate, } from 'react-router-dom'
+const HeaderCartPriceCalculate = ({ totalPrice,setIsCartActive }) => {
+    const navigate = useNavigate()
+    const naviageToCheckout = () => {
+        setIsCartActive(false)
+        setTimeout(() => navigate('/checkout'), 100);
+        
+    }
     let ecoTax = totalPrice * ((2) / 100)
     let vatPrice = (totalPrice - ecoTax) * (20 / 100)
     let total = (totalPrice - ecoTax + vatPrice)
@@ -29,7 +35,7 @@ const HeaderCartPriceCalculate = ({ totalPrice }) => {
                 </div>
                 <div className="cartbuttons d-flex flex-column">
                     <button type="button" className="btn button1 my-3 py-3">View Cart</button>
-                    <button type="button" className="btn button2 my-3 py-3">Checkout</button>
+                    <button type="button"  data-bs-dismiss="offcanvas" className="btn button2 my-3 py-3" onClick={naviageToCheckout}>Checkout</button>
                 </div>
             </div>
         </>

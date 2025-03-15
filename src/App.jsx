@@ -10,13 +10,16 @@ import Checkout from './components/Checkout/Checkout'
 import Login from './components/Login/Login'
 import Shop from './components/Shop/Shop'
 import poster1 from './assets/slider-2-1.webp'
-import poster2 from './assets/slider-2-2.webp'
+import poster2 from './assets/premium_leather_sofa_resized.png'
+import poster3 from './assets/slider-2-2.webp'
+import poster4 from './assets/DiningSet.webp'
 import product1 from './assets/product1.webp'
 import product2 from './assets/product2.webp'
 import product3 from './assets/product3.webp'
 import product4 from './assets/product4.webp'
 import Wishlist from './components/Wishlist/Wishlist'
 import { useState } from 'react'
+import Footer from './components/Footer/Footer'
 const productsData = [
   {
       id: 1,
@@ -100,14 +103,14 @@ const carouselData = [
   },
   {
       id: 2,
-      image: poster2,
+      image: poster3,
       title: "Best Seller",
-      heading: "Elegant Wooden Dining Set",
+      heading: "Elegant Wooden Set",
       description: "Upgrade your dining experience with our handcrafted wooden dining set, featuring premium oak wood."
   },
   {
       id: 3,
-      image: poster2,
+      image: poster4,
       title: "Best Seller",
       heading: "Elegant Wooden Dining Set",
       description: "Upgrade your dining experience with our handcrafted wooden dining set, featuring premium oak wood."
@@ -130,12 +133,13 @@ function App() {
             <Route path='/' element={<Home productsData = {productsData} carouselData={carouselData} wishListedProducts={wishListedProducts} setWishListedProducts={setWishListedProducts} qty={qty} setQty={setQty} cartItems={cartItems} setCartItems={setCartItems} setIsCartActive={setIsCartActive}/>} />
             <Route path='/aboutus' element={<AboutUs />} />
             <Route path='/account' element={<MyAccount />} />
-            <Route path='/checkout' element={<Checkout />} />
+            <Route path='/checkout' element={<Checkout cartItems={cartItems}/>}  />
             <Route path='/login' element={<Login />} />
             <Route path='/shop' element={<Shop productsData = {productsData}/>} />
             <Route path='/wishlist' element={<Wishlist productsData={wishListedProducts} qty={qty} setQty={setQty} cartItems={cartItems} setCartItems={setCartItems}/>} />
           </Routes>
       </main>
+      <Footer />
       </Router>
 
     </>

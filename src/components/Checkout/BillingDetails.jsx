@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './BillingDetails.css'
-const BillingDetails = () => {
+const BillingDetails = ({cartItems}) => {
+    const [totalPrice, setTotalPrice] = useState(0)
+    useEffect(() => {
+        const total = cartItems.reduce((sum, item) => sum + item.price, 0)
+        setTotalPrice(total.toFixed(2))
+    }, [cartItems])
+    
+    let ecoTax = totalPrice * ((2) / 100)
+    let vatPrice = (totalPrice - ecoTax) * (20 / 100)
+    let total = (totalPrice - ecoTax + vatPrice)
+    ecoTax = ecoTax.toFixed(2)
+    vatPrice = vatPrice.toFixed(2)
+    total = total.toFixed(2)
     return (
         <div className="container billingDetails d-flex justify-content-center">
 
@@ -21,9 +33,9 @@ const BillingDetails = () => {
                     </div>
                 </div>
                 <div className="col-md-12">
-                    <label htmlFor="validationCustomUsername" className="form-label">Company Name</label>
+                    <label htmlFor="validationCompnyName" className="form-label">Company Name</label>
                     <div className="input-group has-validation">
-                        <input type="text" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                        <input type="text" className="form-control" id="validationCompnyName" aria-describedby="inputGroupPrepend" required />
                         <div className="invalid-feedback">
                             Please choose a username.
                         </div>
@@ -40,9 +52,9 @@ const BillingDetails = () => {
                     </div>
                 </div>
                 <div className="col-md-12">
-                    <label htmlFor="validationCustomUsername" className="form-label">Street Address</label>
+                    <label htmlFor="validationAddress" className="form-label">Street Address</label>
                     <div className="input-group has-validation">
-                        <input type="text" className="form-control" placeholder='House Number and Street Name' id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                        <input type="text" className="form-control" placeholder='House Number and Street Name' id="validationAddress" aria-describedby="inputGroupPrepend" required />
                         <div className="invalid-feedback">
                             Please Enter a Street Address.
                         </div>
@@ -50,16 +62,16 @@ const BillingDetails = () => {
                 </div>
                 <div className="col-md-12">
                     <div className="input-group has-validation">
-                        <input type="text" className="form-control" placeholder='Appartment, Suite, unit, etc.' id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                        <input type="text" className="form-control" placeholder='Appartment, Suite, unit, etc.' id="validationStreet" aria-describedby="inputGroupPrepend" required />
                         <div className="invalid-feedback">
                             Please Enter a Street Address.
                         </div>
                     </div>
                 </div>
                 <div className="col-md-12">
-                    <label htmlFor="validationCustomUsername" className="form-label">Town/City</label>
+                    <label htmlFor="validationTown" className="form-label">Town/City</label>
                     <div className="input-group has-validation">
-                        <input type="text" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                        <input type="text" className="form-control" id="validationTown" aria-describedby="inputGroupPrepend" required />
                         <div className="invalid-feedback">
                             Please Enter a City Address.
                         </div>
@@ -127,21 +139,30 @@ const BillingDetails = () => {
                     <h6>Product</h6>
                     <h6>Total</h6>
                 </div>
-                <div className="col-md-10 d-flex justify-content-between">
-                    <p>Product Name X 1</p>
-                    <p>$329</p>
-                </div>
-                <div className="col-md-10 d-flex justify-content-between">
-                    <p>Product Name X 1</p>
-                    <p>$329</p>
-                </div>
+
+                
+                    {
+                        cartItems.length>0 ? (
+                            cartItems.map((item,index) => (
+                                <div className="col-md-10 d-flex justify-content-between">
+                                
+                                <p>{item.name} X 1</p>
+                                <p>${item.price}</p>
+                                </div>
+                               
+                            ))
+                        ):(
+                            <p>No Items in Cart</p>
+                        )
+                       
+                    }
                 <div className="col-md-10 d-flex justify-content-between">
                     <h6>Shipping</h6>
                     <p>Free Shipping</p>
                 </div>
                 <div className="col-md-10 d-flex justify-content-between">
                     <h5>Total</h5>
-                    <p style={{ color: "#ff7004" }}><b>$329</b></p>
+                    <p style={{ color: "#ff7004" }}><b>${total}</b></p>
                 </div>
                 <div className="col-md-10">
                     <h5>Direct bank transfer</h5>

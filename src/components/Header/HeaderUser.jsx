@@ -29,10 +29,10 @@ const HeaderUser = () => {
         navigate("/account")
     }
     const handleNavigateToCheckOut = () => {
-        navigate("./checkout")
+        navigate("/checkout")
     }
     const handleNavigateToLoginPage = () => {
-        navigate("./login")
+        navigate("/login")
     }
     return (
         <>

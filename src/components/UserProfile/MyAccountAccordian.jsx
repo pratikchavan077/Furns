@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './MyAccount.css'
 import MyAccountAccordianForm from './MyAccountAccordianForm'
 
-const MyAccountAccordian = ({ number, title, activeAccordion, setActiveAccordion }) => {
+const MyAccountAccordian = ({ number, title, activeAccordion, setActiveAccordion, onClickNavigate }) => {
     const isActive = activeAccordion === number;
 
     const handleDisplayAccordian = () => {
@@ -18,7 +18,7 @@ const MyAccountAccordian = ({ number, title, activeAccordion, setActiveAccordion
                 </h2>
                 <div className={`accordion-collapse collapse ${isActive ? "show" : ""}`} data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <MyAccountAccordianForm number={number}/>
+                        <MyAccountAccordianForm number={number} onClickNavigate={onClickNavigate}/>
                     </div>
                 </div>
             </div>

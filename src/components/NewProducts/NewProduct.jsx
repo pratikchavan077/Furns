@@ -14,7 +14,7 @@ const NewProduct = ({ productsData }) => {
                 <div className="container-fluid">
                     {
                         newProducts.length > 0 && (
-                            <div className="productCards d-flex justify-content-center align-items-center flex-wrap">
+                            <div className="productCards d-flex justify-content-center align-items-center">
                                 <ProductCard productsData={newProducts} />
                             </div>
                         )
