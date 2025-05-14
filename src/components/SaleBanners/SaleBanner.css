@@ -58,6 +58,30 @@
     .productBannersForOffers .card {
         width: 90%; /* Full width on mobile */
     }
+    .productBannersForOffers .card .card-img-overlay .leftHeading{
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-left: 12rem;
+        max-width: 8rem;
+    }
+    .productBannersForOffers .card .card-img-overlay .leftText{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        margin-left: 12rem;
+        max-width: 8rem;
+    }
+    .productBannersForOffers .card .card-img-overlay .rightHeading{
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-left: 1.2rem;
+        max-width: 8rem;
+    }
+    .productBannersForOffers .card .card-img-overlay .rightText{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        margin-left: 1.2rem;
+        max-width: 8rem;
+    }
 }
 
 @media screen and (max-width: 480px) {

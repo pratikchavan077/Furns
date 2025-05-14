@@ -75,7 +75,7 @@ const AboutUs = () => {
                             <div className="card-body">
                                 <h5>{member.name}</h5>
                                 <div className="role-container">
-                                    <p className={`card-text ${hoveredCard === member.id ? "hidden-text" : ""}`}>
+                                    <p className={`card-text role${hoveredCard === member.id ? "hidden-text" : ""}`}>
                                         {member.role}
                                     </p>
 

@@ -58,3 +58,14 @@
     display: flex;
     justify-content: space-between;
 }
+/* .btnFltr{
+    display: none;
+} */
+@media (max-width: 768px){
+    .categories{
+        display: none;
+    }
+    /* .btnFltr{
+        display: block;
+    } */
+}

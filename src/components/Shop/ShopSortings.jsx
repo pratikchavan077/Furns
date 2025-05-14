@@ -2,6 +2,7 @@ import React from 'react';
 import './ShopSorting.css'
 const ShopSortings = () => {
     return (
+        <>
         <div className="categories">
             <ul className="category-list">
                 <h5>CATEGORIES</h5>
@@ -148,6 +149,7 @@ const ShopSortings = () => {
                 </div>
             </ul>
         </div>
+        </>
     );
 };
 
